@@ -1,0 +1,8 @@
+<h1> All tasks for <%= @list.name %> list </h1>
+
+<% @list.tasks.each do |task| %>
+	<p> * <%= task.description %></p>
+<% end %>
+
+<!--  Add a link to delete the list -->
+<%= link_to 'Delete', @list, :method => :delete, :confirm => "Are you sure?" %> 
